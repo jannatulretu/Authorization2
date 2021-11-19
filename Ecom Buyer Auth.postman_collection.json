@@ -1,0 +1,1253 @@
+{
+	"info": {
+		"_postman_id": "79590232-3b9a-43c7-8938-ba1056c8c3a3",
+		"name": "Ecom Buyer Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication & Authorization",
+			"item": [
+				{
+					"name": "RESITER",
+					"item": [
+						{
+							"name": "Positive Test",
+							"item": [
+								{
+									"name": "1. Buyer should register",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"bugtrackingteam3@gmail.com\",\r\n    \"name\":\"Test Account\",\r\n    \"password\":\"112233\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/signup",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"signup"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "negative",
+							"item": [
+								{
+									"name": "1.1. Buyer should not register",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"bugtrackingteam3@gmail.com\",\r\n    \"name\":\"Test Account\",\r\n    \"password\":\"112233\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/signup",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"signup"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "1.2. Buyer should not register with same information",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"bugtrackingteam3@gmail.com\",\r\n    \"name\":\"Test Account\",\r\n    \"password\":\"112233\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/signup",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"signup"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "1.3. Buyer Should not resgister with blank credential",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"bugtrackingteam3@gmail.com\",\r\n    \"name\":\"Test Account\",\r\n    \"password\":\"112233\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/signup",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"signup"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "1.4. Buyer Should not resgister with blank username and password",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"bugtrackingteam3@gmail.com\",\r\n    \"name\":\"Test Account\",\r\n    \"password\":\"112233\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/signup",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"signup"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "29.jpg",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://res.cloudinary.com/shimul/image/upload/v1636648174/bkQgWokxY-pngtree-color-simple-oil-painting-art-advertising-background-image_220207%20%281%29.jpg",
+									"protocol": "https",
+									"host": [
+										"res",
+										"cloudinary",
+										"com"
+									],
+									"path": [
+										"shimul",
+										"image",
+										"upload",
+										"v1636648174",
+										"bkQgWokxY-pngtree-color-simple-oil-painting-art-advertising-background-image_220207%20%281%29.jpg"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login without email address",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Buyer logged in successfully\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Status code name has string\", function () {\r",
+											"    pm.response.to.have.status(\"Not Found\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response time is less than 1500ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"\",\r\n    \"password\":\"223344\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/user/signin",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"user",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change password",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTg2YWMyYTdmOWY0NzAzY2NlOWJjYTkiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiYnVndHJhY2tpbmd0ZWFtM0BnbWFpbC5jb20iLCJpYXQiOjE2MzYyMTYxNDQsImV4cCI6MTYzNjMwMjU0NH0.LT7YBSk_5ua9NaAEUNmsvtgTip5tlcWbAjwEpeCmyKI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"currentPassword\":\"112233\",\r\n    \"newPassword\":\"223344\",\r\n    \"confirmPassword\":\"223344\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/user/changepassword",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"user",
+										"changepassword"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "OTO Verify",
+					"item": [
+						{
+							"name": "1. Positve Test",
+							"item": [
+								{
+									"name": "OTO should Verify with Email",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"otp\":\"464332\",\r\n    \"email\":\"bugtrackingteam3@gmail.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/verifyotp",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"verifyotp"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "1.1. Negative Test",
+							"item": [
+								{
+									"name": "1.2. OTO should  not Verify with wrong Email",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"otp\":\"464332\",\r\n    \"email\":\"bugtrackingteam3@gmail.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/verifyotp",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"verifyotp"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "1.2. OTO expired",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"otp\":\"464332\",\r\n    \"email\":\"bugtrackingteam3@gmail.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/verifyotp",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"verifyotp"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "1.3. OTP verify with same email",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"otp\":\"464332\",\r\n    \"email\":\"bugtrackingteam3@gmail.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/verifyotp",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"verifyotp"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Resend OTP",
+					"item": [
+						{
+							"name": "Positive",
+							"item": [
+								{
+									"name": "resend OTP in same Eamil",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"funnytom92@gmail.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/resendotp",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"resendotp"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Negative Test",
+							"item": [
+								{
+									"name": "resend OTP in wrong Eamil",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"funnytom92@gmail.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/resendotp",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"resendotp"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Buyer Login",
+					"item": [
+						{
+							"name": "Positive Test",
+							"item": [
+								{
+									"name": "login",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Buyer logged in successfully\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code name has string\", function () {\r",
+													"    pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response time is less than 1500ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"bugtrackingteam3@gmail.com\",\r\n    \"password\":\"223344\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/signin",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"signin"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Negative Test",
+							"item": [
+								{
+									"name": "l1.1 Buyer Shounot not login Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Buyer logged in successfully\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code name has string\", function () {\r",
+													"    pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response time is less than 1500ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"bugtrackingteam3@gmail.com\",\r\n    \"password\":\"223344\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/signin",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"signin"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "l1.2 Buyer Should not login without email",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Buyer logged in successfully\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code name has string\", function () {\r",
+													"    pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response time is less than 1500ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"bugtrackingteam3@gmail.com\",\r\n    \"password\":\"223344\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/signin",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"signin"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "l1.3 Buyer Should not login without pasword Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Buyer logged in successfully\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code name has string\", function () {\r",
+													"    pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response time is less than 1500ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"bugtrackingteam3@gmail.com\",\r\n    \"password\":\"223344\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/signin",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"signin"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "l1.4 Buyer Should not login without email n passord",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Buyer logged in successfully\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code name has string\", function () {\r",
+													"    pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response time is less than 1500ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"bugtrackingteam3@gmail.com\",\r\n    \"password\":\"223344\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/signin",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"signin"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Verify Token",
+					"item": [
+						{
+							"name": "Positive Test",
+							"item": [
+								{
+									"name": "verify token",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Token is verified\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response time is less than 1500ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTg2YWMyYTdmOWY0NzAzY2NlOWJjYTkiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiYnVndHJhY2tpbmd0ZWFtM0BnbWFpbC5jb20iLCJpYXQiOjE2MzYyMTYxNDQsImV4cCI6MTYzNjMwMjU0NH0.LT7YBSk_5ua9NaAEUNmsvtgTip5tlcWbAjwEpeCmyKI",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{URL}}/user/verify",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"verify"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Negative Test",
+							"item": [
+								{
+									"name": "token Should not Match",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Token is verified\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response time is less than 1500ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTg2YWMyYTdmOWY0NzAzY2NlOWJjYTkiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiYnVndHJhY2tpbmd0ZWFtM0BnbWFpbC5jb20iLCJpYXQiOjE2MzYyMTYxNDQsImV4cCI6MTYzNjMwMjU0NH0.LT7YBSk_5ua9NaAEUNmsvtgTip5tlcWbAjwEpeCmyKI",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{URL}}/user/verify",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"verify"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "token is wrong",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Token is verified\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response time is less than 1500ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTg2YWMyYTdmOWY0NzAzY2NlOWJjYTkiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiYnVndHJhY2tpbmd0ZWFtM0BnbWFpbC5jb20iLCJpYXQiOjE2MzYyMTYxNDQsImV4cCI6MTYzNjMwMjU0NH0.LT7YBSk_5ua9NaAEUNmsvtgTip5tlcWbAjwEpeCmyKI",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{URL}}/user/verify",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"verify"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Authorization type missing",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Token is verified\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response time is less than 1500ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTg2YWMyYTdmOWY0NzAzY2NlOWJjYTkiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiYnVndHJhY2tpbmd0ZWFtM0BnbWFpbC5jb20iLCJpYXQiOjE2MzYyMTYxNDQsImV4cCI6MTYzNjMwMjU0NH0.LT7YBSk_5ua9NaAEUNmsvtgTip5tlcWbAjwEpeCmyKI",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{URL}}/user/verify",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"verify"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Update Account",
+					"item": [
+						{
+							"name": "Positive Test",
+							"item": [
+								{
+									"name": "update account",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTg2YWMyYTdmOWY0NzAzY2NlOWJjYTkiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiYnVndHJhY2tpbmd0ZWFtM0BnbWFpbC5jb20iLCJpYXQiOjE2MzYyMTYxNDQsImV4cCI6MTYzNjMwMjU0NH0.LT7YBSk_5ua9NaAEUNmsvtgTip5tlcWbAjwEpeCmyKI",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Pranto\",\r\n    \"mobile\":\"+8801629111902\",\r\n    \"contactNumber\":\"\",\r\n    \"gender\":\"Male\",\r\n    \"birthDate\":\"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/update",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"update"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Negative Test",
+							"item": [
+								{
+									"name": "Invalid Token",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTg2YWMyYTdmOWY0NzAzY2NlOWJjYTkiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiYnVndHJhY2tpbmd0ZWFtM0BnbWFpbC5jb20iLCJpYXQiOjE2MzYyMTYxNDQsImV4cCI6MTYzNjMwMjU0NH0.LT7YBSk_5ua9NaAEUNmsvtgTip5tlcWbAjwEpeCmyKI",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Pranto\",\r\n    \"mobile\":\"+8801629111902\",\r\n    \"contactNumber\":\"\",\r\n    \"gender\":\"Male\",\r\n    \"birthDate\":\"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/update",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"update"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Invalid Token Copy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTg2YWMyYTdmOWY0NzAzY2NlOWJjYTkiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiYnVndHJhY2tpbmd0ZWFtM0BnbWFpbC5jb20iLCJpYXQiOjE2MzYyMTYxNDQsImV4cCI6MTYzNjMwMjU0NH0.LT7YBSk_5ua9NaAEUNmsvtgTip5tlcWbAjwEpeCmyKI",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Pranto\",\r\n    \"mobile\":\"+8801629111902\",\r\n    \"contactNumber\":\"\",\r\n    \"gender\":\"Male\",\r\n    \"birthDate\":\"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/user/update",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"update"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Change Profile Image",
+					"item": [
+						{
+							"name": "Positive Test",
+							"item": [
+								{
+									"name": "change profile image",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MThiM2VjNDdmOWY0NzAzY2NlOWJjYzQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiamFubmF0dWxyZXR1N0BnbWFpbC5jb20iLCJpYXQiOjE2MzY1MTU1NzMsImV4cCI6MTYzNjYwMTk3M30.CMr5tj2bO1MoSC-A9fcDt-e6hHgceeWklDkAo23SE4o",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "profile",
+													"type": "file",
+													"src": "/Users/jannatulfardusretu/Downloads/pngtree-color-simple-oil-painting-art-advertising-background-image_220207 (1).jpg"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{URL}}/user/profileimage",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"profileimage"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Negative Test",
+							"item": [
+								{
+									"name": "Invalid Token",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MThiM2VjNDdmOWY0NzAzY2NlOWJjYzQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiamFubmF0dWxyZXR1N0BnbWFpbC5jb20iLCJpYXQiOjE2MzY1MTU1NzMsImV4cCI6MTYzNjYwMTk3M30.CMr5tj2bO1MoSC-A9fcDt-e6hHgceeWklDkAo23SE4o",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "profile",
+													"type": "file",
+													"src": "/Users/jannatulfardusretu/Downloads/pngtree-color-simple-oil-painting-art-advertising-background-image_220207 (1).jpg"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{URL}}/user/profileimage",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"profileimage"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Profile Image Missing",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MThiM2VjNDdmOWY0NzAzY2NlOWJjYzQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiamFubmF0dWxyZXR1N0BnbWFpbC5jb20iLCJpYXQiOjE2MzY1MTU1NzMsImV4cCI6MTYzNjYwMTk3M30.CMr5tj2bO1MoSC-A9fcDt-e6hHgceeWklDkAo23SE4o",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "profile",
+													"type": "file",
+													"src": "/Users/jannatulfardusretu/Downloads/pngtree-color-simple-oil-painting-art-advertising-background-image_220207 (1).jpg"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{URL}}/user/profileimage",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"user",
+												"profileimage"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
